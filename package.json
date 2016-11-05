@@ -1,0 +1,31 @@
+{
+  "name": "gulp-less-pug-skeleton",
+  "description": "Skeleton to create websites using Gulp as a task manager, LESS for CSS preprocessing and Pug to generate HTML effortlestly.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/OscarDCorbalan/gulp-less-pug-skeleton",
+  "keywords": "gulp, less, pug, node, skeleton",
+  "license": "MIT",
+  "author": {
+    "name": "Oscar D. Corbalan",
+    "email": "oscardc@gmx.com",
+    "url": "http://www.oscardc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OscarDCorbalan/gulp-less-pug-skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OscarDCorbalan/gulp-less-pug-skeleton/issues",
+    "email": "oscardc@gmx.com"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "gulp": "~3.9",
+    "gulp-connect": "~5.0",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-imagemin": "~3.0",
+    "gulp-less": "~3.2",
+    "gulp-rename": "~1.2",
+    "gulp-uglify": "~2.0"
+  }
+}

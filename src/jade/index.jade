@@ -1,0 +1,23 @@
+- var headTitle = 'Gulp Less Jade Skeleton'
+- var headDescription = 'Skeleton to build static websties using Jade and Less, plus a live-reload webserver for faster development'
+
+doctype html
+html(lang='en')
+	head
+		title= headTitle
+		meta(name='description', content=headDescription)
+		link(rel='stylesheet', href='css/style.css')
+		link(rel='stylesheet', href='css/some_static.css')
+		script(src='js/some_static.js')
+		link(rel='icon', href='images/some_static.jpg')
+	body
+		header
+			h1 Example Jade file
+		p.text-styled This text uses a font from ./source/assets/fonts
+		p Which is different from this font
+		br
+		p.text-center This text is centered using a static CSS from ./source/assets/css
+		button(onclick="assetsFunction()") This button calls a function from ./source/assets/js
+		p And this is a static image copied from ./source/assets/images:
+		div
+			img(src='images/some_static.jpg')

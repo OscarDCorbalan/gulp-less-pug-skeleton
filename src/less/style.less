@@ -1,0 +1,25 @@
+@font-face{
+	font-family: 'Some Static Font';
+	src: url('../fonts/some_static_font.woff2') format('woff2'),
+		 url('../fonts/some_static_font.woff') format('woff');
+}
+
+@font-sans: "Helvetica Neue", "Helvetica", Verdana, sans-serif;
+@font-some: "Some Static Font", serif;
+
+
+body {
+	font-family: @font-sans;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-styled {
+	font-family: @font-some;
+}
+
+h1 {
+	.text-uppercase;
+}
