@@ -1,4 +1,4 @@
-﻿# Gulp + Less + Pug skeleton
+# Gulp + Less + Pug skeleton
 
 This is a skeleton to build static websties using Pug and Less, plus a live-reload webserver for faster development. It uses:
   * **Gulp** to automate build tasks, plus Gulp Connect to provide a local server with live reload .
