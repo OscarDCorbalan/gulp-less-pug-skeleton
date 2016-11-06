@@ -1,6 +1,9 @@
 # Version history
 
 
+## v0.2.1
+* chore: Configure .gitignore
+
 ## v0.2.0
 * chore: Add Pug dependency
 
