@@ -94,4 +94,4 @@ It's also possible to configure you server to automatically deploy the `/public`
 
 # Built by
 
-(Oscar D. Corbalan)[http://www.oscardc.com]
+[Oscar D. Corbalan]([http://www.oscardc.com)
