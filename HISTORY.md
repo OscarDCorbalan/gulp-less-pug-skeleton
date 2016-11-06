@@ -1,6 +1,10 @@
 # Version history
 
 
+## v1.0.0
+* feat: Release.
+* doc: Improve README.
+
 ## v0.3.0
 * feat: Add Gulp task for Pug
 * feat: Add example .pug file

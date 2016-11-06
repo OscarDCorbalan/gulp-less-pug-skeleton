@@ -1,7 +1,7 @@
 {
   "name": "gulp-less-pug-skeleton",
   "description": "Skeleton to create websites using Gulp as a task manager, LESS for CSS preprocessing and Pug to generate HTML effortlestly.",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/OscarDCorbalan/gulp-less-pug-skeleton",
   "keywords": "gulp, less, pug, node, skeleton",
   "license": "MIT",
