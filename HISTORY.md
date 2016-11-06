@@ -1,6 +1,9 @@
 # Version history
 
 
+## v1.0.1
+* chore: Add generated /public directory.
+
 ## v1.0.0
 * feat: Release.
 * doc: Improve README.

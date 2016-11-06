@@ -91,3 +91,7 @@ Just copy into your server everything generated in the `public/` dir and you sho
 Make sure that your Pug templates generate an index.html or that your server is configured to serve any other file you want as default.
 
 It's also possible to configure you server to automatically deploy the `/public` folder from a branch of your Git fork, but it's out of the scope of this Readme.
+
+# Built by
+
+(Oscar D. Corbalan)[http://www.oscardc.com]

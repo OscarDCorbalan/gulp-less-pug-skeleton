@@ -1,0 +1,1 @@
+function minifiedAssetsFunction(){alert("Hello, I am a minified JS.")}
