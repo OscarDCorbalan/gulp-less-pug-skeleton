@@ -1,6 +1,10 @@
 # Version history
 
 
+## v0.3.0
+* feat: Add Gulp task for Pug
+* feat: Add example .pug file
+
 ## v0.2.1
 * chore: Configure .gitignore
 

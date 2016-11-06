@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 const less = require('gulp-less');
-const jade = require('gulp-jade');
+const pug = require('gulp-pug');
 const cssmin = require('gulp-cssmin');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
@@ -17,13 +17,13 @@ SRC_DIR.assets = SRC_DIR.root + 'assets/';
 SRC_DIR.img = SRC_DIR.root + 'images/';
 SRC_DIR.js = SRC_DIR.root + 'js/';
 SRC_DIR.less = SRC_DIR.root + 'less/';
-SRC_DIR.jade = SRC_DIR.root + 'jade/';
+SRC_DIR.pug = SRC_DIR.root + 'pug/';
 
 // Source file matchers, using respective directories
 const SRC_FILES = {
 	less: SRC_DIR.less + '*.less',
-	jadeTemplates: SRC_DIR.jade + 'templates/*.jade',
-	jade: SRC_DIR.jade + '*.jade',
+	pugTemplates: SRC_DIR.pug + 'templates/*.pug',
+	pug: SRC_DIR.pug + '*.pug',
 	js: SRC_DIR.js + '**/*.js',
 	images: SRC_DIR.img + '**/*',
 	assets: SRC_DIR.assets + '**/*'
@@ -43,7 +43,7 @@ PUB_DIR.img = PUB_DIR.root + 'images/';
 
 gulp.task('watch', () => {
 	gulp.watch(SRC_FILES.less, ['less']);
-	gulp.watch([SRC_FILES.jade,  SRC_FILES.jadeTemplates], ['jade']);
+	gulp.watch([SRC_FILES.pug,  SRC_FILES.pugTemplates], ['pug']);
 	gulp.watch(SRC_FILES.images, ['imagemin']);
 	gulp.watch(SRC_FILES.assets.onlyCopy, ['copyAssets']);
 });
@@ -66,14 +66,14 @@ gulp.task('less', () =>
 		.pipe(connect.reload())
 );
 
-gulp.task('jade', () =>
-	gulp.src(SRC_FILES.jade)
-		.pipe(jade({
+gulp.task('pug', () =>
+	gulp.src(SRC_FILES.pug)
+		.pipe(pug({
 			// pretty: true // Comment this to get minified HTML
 		}))
 		.pipe(gulp.dest(file => {
-			var jadeIndex = file.base.lastIndexOf('jade');
-			var relPath = file.base.substr(jadeIndex+5);
+			var pugIndex = file.base.lastIndexOf('pug');
+			var relPath = file.base.substr(pugIndex+4);
 			return PUB_DIR.root + relPath;
 		}))
 		.pipe(connect.reload())
@@ -101,5 +101,5 @@ gulp.task('webserver', () =>
 	})
 );
 
-gulp.task('default', ['less', 'jade', 'imagemin', 'jsmin', 'copyAssets']);
+gulp.task('default', ['less', 'pug', 'imagemin', 'jsmin', 'copyAssets']);
 gulp.task('server', ['default', 'webserver', 'watch']);
