@@ -11,7 +11,7 @@ Extra things to make your website faster:
 
 ## Issues and/or questions
 
-Please open a thread in https://github.com/OscarDCorbalan/gulp-less-Pug-skeleton/issues
+Please open a thread in https://github.com/OscarDCorbalan/gulp-less-pug-skeleton/issues
 
 # Documentation
 
@@ -34,9 +34,12 @@ Within the download you'll find the following directories and files:
 │   ├── assets             Static assets for the site
 │   │   ├── css             Yours or others' CSS files, e.g. bootstrap.css. Will be minified.
 │   │   ├── fonts           Custom fonts
-│   │   ├── images          These will be minified by gulp when processing them
 │   │   ├── js              Yours or others' JS files, e.j. jquery.js
 │   │   └── robots.txt      Default robots.txt (allows crawling everything)
+│   ├── images            Images in here get minified by gulp-imagemin.
+│   │   └── *
+│   ├── js                Scripts in here get minified by gulp-uglify
+│   │   └── *
 │   ├── pug                Pug files to be processed by gulp-pug.
 │   │   ├── templates       Partial views.
 │   │   ├── index.pug       Sample index.
@@ -55,6 +58,8 @@ Within the download you'll find the following directories and files:
 ├── package.json          Package configuration  
 └── README.md             This file
 ```
+
+Note that everything in src/assets/ just gets copied to public/js. For example, src/assets/js are just copied, while src/js get processed by gulp-uglify. The same would happen with images found in src/assets instead of src/images.
 
 ## Running it
 
@@ -86,10 +91,3 @@ Just copy into your server everything generated in the `public/` dir and you sho
 Make sure that your Pug templates generate an index.html or that your server is configured to serve any other file you want as default.
 
 It's also possible to configure you server to automatically deploy the `/public` folder from a branch of your Git fork, but it's out of the scope of this Readme.
-
-
-# Sites built using this skeleton
-
-Want to list yours? Just send me a message or submit a pull request.
-
-  * [Taxi Sotogrande](http://www.sotogrande.taxi), [GitHub repo](https://github.com/OscarDCorbalan/sotogrande.taxi)
